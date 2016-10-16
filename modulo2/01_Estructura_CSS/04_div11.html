@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Flex </title>
+<head>
+<style>
+body, html {
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+#main {
+   height: 80%;
+   display: -webkit-flex;
+   display: flex;
+   flex-flow: row;
+}
+#main article {
+	background: #CFC;
+	flex: 3 1 60%;
+	order: 2;
+}
+#main nav {
+	background: #E8A55E;
+	flex: 1 6 20%;
+	order: 1;
+}
+#main aside {
+	background: #BED944;
+	flex: 1 6 20%;
+	order: 3;
+}
+header, footer {
+	display: block;
+	min-height: 10%;
+	background: #C4B1AD;
+}
+h2{color: blue;
+}
+
+
+</style>
+</head>
+<body>
+<header><h2>header</h2></header>
+<div id='main'>
+  <article><h2>article</h2></article>
+  <nav><h2>nav</nav>
+  <aside><h2>aside</h2></aside>
+ </div>
+<footer><h2>footer</h2></footer>
+</body>
+</html>
