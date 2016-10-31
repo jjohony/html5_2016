@@ -1,0 +1,180 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trabajo de Johony</title>
+<head>
+      <style>
+      body, html {
+        height: 100%;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+      }
+      #main {
+         height: 80%;
+         display: -webkit-flex;
+         display: flex;
+         flex-flow: row;
+      }
+      #main article {
+        background: #EFD69F;
+        flex: 3 1 60%;
+        order: 2;
+      }
+      #main nav {
+        background: #EFD69F;
+        flex: 1 6 20%;
+        order: 1;
+      }
+      #main aside {
+        background: #EFD69F;
+        flex: 1 6 20%;
+        order: 3;
+      }
+      header, footer {
+        display: block;
+        min-height: 10%;
+        background: #ECEE8E;
+      }
+            ul.caja {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          position: absolute;
+          top: 2em;
+          left: 1em;
+          width: 10em }
+        h1 {
+          font-family: Helvetica, Geneva, Arial,
+                SunSans-Regular, sans-serif }
+        ul.caja li {
+          background: white;
+          margin: 0.5em 0;
+          padding: 0.3em;
+          border-right: 0em solid black }
+        ul.caja a {
+          text-decoration: none }
+        a:link {
+          color: blue }
+        a:visited {
+          color: purple }
+
+        address {
+          margin-top: 30em;
+          padding-top: 1em;
+          border-top: thin dotted }
+          p:{colortex:F9F8F5 }
+
+      </style>
+</head>
+<body>
+<header>             Buenos días, bienvenido a la calculadora de Johony Ticona </header>
+<div id='main'>
+  <article>
+  
+
+<meta charset="utf-8">
+
+<script type="text/javascript">
+  var num, acc = 0, op = "", ac=1 ;
+
+  function mas()   { acc = num.value;  op = "+"; }
+  function menos() { acc = num.value;  op = "-"; }
+  function multiplicacion() { ac = num.value;  op = "*"; }
+  function division() { ac = num.value;  op = "/"; }
+
+  function calcular() {
+    if (op === "+") {num.value = (+acc + +num.value)}
+    if (op === "-") {num.value = (+acc - +num.value)}
+    if (op === "*") {num.value = (+ac *num.value)}
+    if (op === "/") {num.value = (+ac /num.value)}
+  }
+
+                  function vaciar () {
+                    document.getElementById("num").value = "";
+                  }
+
+                  function cuadrado() {
+                    var num = document.getElementById("num");
+                    num.value = num.value * num.value;
+                  }
+             
+
+                  function inverso() {
+                    var num = document.getElementById("num");
+                    num.value = 1/num.value;
+                  }
+
+
+        function Newton(Input){
+          
+           var X = 1;
+           var FX = X*X - Input.value;
+           for (var i = 0; i < 10; i++) {
+              X = X - FX/(2*X);
+              FX = X*X - Input.value;
+           }
+           Input.value = X;
+           return true;
+        }
+
+        function ClearForm(form) {
+           form.Sqr.value = "";
+        }
+
+
+
+  function inic ()   {num = document.getElementById("num");}
+  function vaciar () {num.value = "";}  
+
+</script>
+
+
+<body onLoad="inic()">
+
+
+  Numero:<p>
+  <input type="text" size="12" id="num" onClick="vaciar()" ><p>
+  <button onClick="mas()">+</button>
+  <button onClick="menos()">-</button>
+  <button onClick="calcular()">=</button>
+
+  <button onclick="cuadrado()">x<sup>2</sup></button>
+  <button onclick="inverso()"> 1/x </button>
+  <button onClick="multiplicacion()">*</button>
+  <button onClick="division()">/</button>
+  
+
+  <FORM METHOD=POST>
+        <p> <INPUT TYPE=TEXT NAME=Sqr SIZE=10 MAXLENGTH=10 onFocus="ClearForm(this.form)">
+        <p><INPUT TYPE="button" VALUE="√" onClick="Newton(this.form.Sqr)">
+  </FORM>
+  </p>
+
+
+
+
+  </article>
+  <nav>
+    <ul class="caja">
+    
+    
+
+     
+    
+    </ul>
+
+  </nav>
+  <aside></aside>
+ </div>
+
+  <footer><form><input type="button" value="volver atrás" name="volver atrás2" onclick="history.back()" /></form>
+</footer>
+</body>
+</html>
+
+
+
+
